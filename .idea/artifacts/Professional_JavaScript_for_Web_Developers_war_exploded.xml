@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Professional JavaScript for Web Developers:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Professional_JavaScript_for_Web_Developers_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Professional JavaScript for Web Developers/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Professional JavaScript for Web Developers" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

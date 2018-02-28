@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script type="text/javascript">
+    function compare1(a,b) {
+        if(a &lt; b) {  <!--在XHTML中，"<"会被当作开始一个新标签来解析-->
+            alert(b);
+        } else if(a = b) {
+            alert(0);
+        } else {
+            alert(a);
+        }
+    }
+    <!-- 使用<\![CData[xxxx]]>来避免这样的问题 -->
+    <!-- 对于不兼容XHTML因而不支持CData片段的浏览器来说，将CData注释掉就可以了 -->
+    //<![CDATA[
+    function compare2(a,b) {
+        if(a < b) {
+            alert(b);
+        } else if(a = b) {
+            alert(0);
+        } else {
+            alert(a);
+        }
+    }
+    //]]>
+</script>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script type="text/javascript">
+    function compare(a,b) {
+        if(a < b) {
+            alert(b);
+        } else if(a = b) {
+            alert(0);
+        } else {
+            alert(a);
+        }
+    }
+</script>
