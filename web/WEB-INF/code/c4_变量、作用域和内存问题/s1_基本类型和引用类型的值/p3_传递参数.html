@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * ECMAScript中所有函数的参数都是按值传递的。
+     * 在向参数传递基本类型的值时，被传递的值会被复制给一个局部变量。
+     * 在向参数传递引用类型的值时，会把这个值在内存中的地址复制给一个局部变量
+     */
+    function addTen(num) {
+        num += 10;
+        return num;
+    }
+
+    var count = 20;
+    var result = addTen(count);
+    console.log("count=" + count);
+    console.log("result=" + result);
+
+    function setName(obj) {
+        obj.name = "Nicholas";
+        person =obj;
+        obj.name = "Greg";
+    }
+    var person = new Object();
+    setName(person);
+    console.log("person.name=" + person.name);
+
+    var arr = [];
+    alert(arr instanceof Array);
+    alert(arr.constructor);
+    alert(Object.prototype.toString.call(arr) === "[object Array]")
+</script>
+</body>
+</html>

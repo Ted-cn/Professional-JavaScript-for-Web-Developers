@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var array = [];
+    //1.ECMAScript5新增方法，目前支持的浏览器有IE9+，Firefox4+,Safari5+,Opera 10.5+和Chrome
+    console.log(Array.isArray(array));
+
+    //2.对于不支持方法1的
+    console.log(Object.prototype.toString.call(array));
+</script>
+</body>
+</html>
