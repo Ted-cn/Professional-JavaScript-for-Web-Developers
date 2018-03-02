@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * concat() 既可以连接两个数据，又可以连接数据与元素
+     */
+    var colors = ["red","green","blue"];
+    var colors2 = colors.concat("yello", ["black","brown"]);
+    console.log("colors=" + colors);
+    console.log("colors2=" + colors2);
+    //["red","green","blue","yello","black","brown"]
+
+    /**
+     * slice()方法用于截取数据（不会影响原数据）
+     */
+    var colors3 = colors2.slice(1);
+    var colors4 = colors2.slice(1,4);
+    console.log("colors2=" + colors2);
+    console.log("colors3=" + colors3);
+    console.log("colors4=" + colors4);
+
+    /**
+     * splice()
+     */
+    //colors = ["red","green","blue"];
+
+    //1.删除 splice（要删除的第一项位置，删除的项数）
+    //var delColors = colors.splice(1,2);
+    //console.log("colors=" + colors);
+    //console.log("delColors=" + delColors); //["green","blue"]
+
+    //2.插入 splice(开始位置，删除个数，插入对象)
+    //var insColors = colors.splice(1,0,"pink");
+    //console.log("colors=" + colors); //["red","pink","green","blue"]
+    //console.log("insColors=" + insColors); //空数组
+
+    //3.替换 splice(开始位置，要删除的项数，和要插入的任意数量的项)
+    var repColors = colors.splice(1,1,"pink");
+    console.log("colors=" + colors); //["red","pink","blue"]
+    console.log("insColors=" + repColors); //["green"]
+</script>
+</body>
+</html>
