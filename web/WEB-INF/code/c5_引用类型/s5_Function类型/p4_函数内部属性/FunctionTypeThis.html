@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>函数内部对象this</title>
+</head>
+<body>
+<script>
+
+    /**
+     * this 引用的是函数执行的环境对象
+     * @type {string}
+     */
+    window.color = "red";
+    var o = {color: "blue"};
+
+    function sayColor() {
+        alert(this.color);
+    }
+
+    sayColor();  //"red"
+
+    o.sayColor = sayColor;
+    o.sayColor();  //"blue"
+</script>
+</body>
+</html>

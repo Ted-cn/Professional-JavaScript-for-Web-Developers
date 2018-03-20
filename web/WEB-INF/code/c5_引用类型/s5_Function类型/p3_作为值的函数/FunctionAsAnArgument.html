@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function callSomeFunction(someFunction, someArgument) {
+        return someFunction(someArgument);
+    }
+
+    function add10(num) {
+        return num + 10;
+    }
+
+    var result1 = callSomeFunction(add10, 10);
+    alert("result1= " + result1); //20
+
+
+</script>
+</body>
+</html>
