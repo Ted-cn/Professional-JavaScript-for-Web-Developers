@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var colors = ["white"];
+
+    var count = colors.push("red","green");
+    alert("count=" + count); //3
+
+    var item = colors.pop();
+    alert("item=" + item); //"green"
+
+    //colors = ["white", "red"];
+    var shiftItem = colors.shift();
+    alert("shiftItem=" + shiftItem);
+
+    var shiftCount = colors.unshift("black","brown");
+    alert("shiftCount=" + shiftCount);
+    alert("colors=" + colors);
+</script>
+</body>
+</html>

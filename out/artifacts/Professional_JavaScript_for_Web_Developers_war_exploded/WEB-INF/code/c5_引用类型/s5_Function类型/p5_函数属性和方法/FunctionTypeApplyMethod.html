@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>apply方法</title>
+</head>
+<body>
+<script>
+    /**
+     * apply()和call()的用途都是在特定的作用域中调用函数，
+     * 实际上等于设置函数体内this对象的值。
+     *
+     * apply()接收两个参数：一个是在其中运行函数的作用域，另一个是数组，
+     * 其中，第二个参数可以是Array实例，也可以是arguments对象
+     */
+
+    function sum(num1, num2) {
+        return num1 + num2;
+    }
+
+
+    function callSum1(num1, num2) {
+        return sum.apply(this, arguments);
+    }
+
+    function callSum2(num1, num2) {
+        return sum.apply(this, [num1, num2]);
+    }
+
+    alert(callSum1(10, 10));
+    alert(callSum2(10, 10));
+</script>
+</body>
+</html>

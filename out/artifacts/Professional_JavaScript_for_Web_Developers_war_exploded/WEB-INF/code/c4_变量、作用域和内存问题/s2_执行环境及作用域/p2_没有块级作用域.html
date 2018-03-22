@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * 在JavaScript中，if语句中的变量声明会将变量添加到当前的执行环境中，
+     * 此外是全局环境
+     */
+    if(true) {
+        var color = "blue";
+    }
+    alert(color);
+
+    /**
+     * 在JavaScript中，由for语句创建的变量i即使在for循环执行结束后，
+     * 也依旧会存在循环外部的执行环境中。
+     */
+    for(var i=0; i<10; i++) {
+
+    }
+    alert(i);
+
+    var arr = [];
+    alert(Array.isArray(arr));
+</script>
+</body>
+</html>

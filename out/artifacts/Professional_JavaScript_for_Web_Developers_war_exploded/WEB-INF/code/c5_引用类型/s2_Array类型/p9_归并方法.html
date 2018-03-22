@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload = function () {
+        var values = [1,2,3,4,5];
+        var sum = values.reduce(function (prev, cur, index, array) {
+            return prev + cur;
+        });
+        console.log("sum=" + sum);
+    }
+</script>
+</body>
+</html>

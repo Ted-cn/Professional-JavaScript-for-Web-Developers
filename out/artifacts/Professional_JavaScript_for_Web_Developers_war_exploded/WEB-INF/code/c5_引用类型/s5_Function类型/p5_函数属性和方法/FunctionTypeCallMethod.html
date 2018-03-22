@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>call方法</title>
+</head>
+<body>
+<script>
+    /**
+     * call()方法与apply()方法的作用相同，区别在于接收参数的方式不同
+     */
+
+    function sum(num1, num2) {
+        return num1 + num2;
+    }
+
+    function callSum(num1, num2) {
+        return sum.call(this, num1, num2);
+    }
+
+    alert(callSum(10, 10));
+</script>
+</body>
+</html>

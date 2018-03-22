@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>工厂模式</title>
+</head>
+<body>
+<script>
+    function createPerson(name, age, job) {
+        var o = new Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayName = function () {
+            alert(this.name);
+        };
+        return o;
+    }
+
+    var person = createPerson("Nicholas", 29, "Doctor");
+    alert(person.name);
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload = function () {
+        var numbers = [1,2,3,4,5,4,3,2,1];
+
+        //对于数组中的每一项都要满足条件
+        var everyResult = numbers.every(function (item, index, array) {
+            return item > 2;
+        });
+        console.log("everyResult=" + everyResult); //false
+
+        //只要有一项满足条件
+        var someResult = numbers.some(function (item, index, array) {
+            return item > 2;
+        });
+        console.log("someResult=" + someResult);
+
+        //筛选
+        var filterResult = numbers.filter(function (item, index, array) {
+            return item > 2;
+        });
+        console.log(filterResult);
+
+        //遍历
+        var mapResult = numbers.map(function (item, index, array) {
+            return item * 2;
+        });
+        console.log(mapResult);
+
+        numbers.forEach(function (item, index, array) {
+            console.log(item);
+        });
+    }
+</script>
+</body>
+</html>

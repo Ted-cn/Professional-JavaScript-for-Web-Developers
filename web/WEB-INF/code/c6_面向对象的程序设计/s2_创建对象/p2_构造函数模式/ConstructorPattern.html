@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>构造函数模式</title>
+</head>
+<body>
+<script>
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = function () {
+            alert(this.name);
+        }
+    }
+
+    var person = new Person("Nicholas", 29, "software Engineer");
+
+    /**
+     * 调用构造函数实际上会经历以下4个步骤
+     * 1.创建一个新对象
+     * 2.将构造函数的作用域赋给新对象（因此this就指向了这个新对象）
+     * 3.执行构造函数中的代码
+     * 4.返回新对象
+     */
+    var obj = new Object();
+    Person.call(obj, "Tom", "10", "student");
+    console.log(obj)
+</script>
+</body>
+</html>

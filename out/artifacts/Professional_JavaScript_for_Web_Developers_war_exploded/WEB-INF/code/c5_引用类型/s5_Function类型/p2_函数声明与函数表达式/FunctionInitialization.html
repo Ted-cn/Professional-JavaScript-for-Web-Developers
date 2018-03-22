@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert(sum(10, 10));
+
+    //函数声明，可以执行
+    function sum(num1, num2) {
+        return num1 + num2;
+    }
+
+    //函数表达式，不能执行
+    var sum = function (num1, num2) {
+        return num1 + num2;
+    };
+
+    /**
+     * 解析器会率先读取函数声明，并使其在执行任何代码之前可用（可以访问）；
+     * 至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解释执行。
+     */
+</script>
+</body>
+</html>
